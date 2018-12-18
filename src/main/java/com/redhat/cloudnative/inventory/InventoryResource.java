@@ -15,7 +15,6 @@ public class InventoryResource {
     @Path("/api/inventory/{itemId}")
     @Produces(MediaType.APPLICATION_JSON)
     public Inventory getAvailability(@PathParam("itemId") String itemId) {
-        Inventory inventory = em.find(Inventory.class, itemId);
-        return inventory;
+        return em.find(Inventory.class, itemId);
     }
 }
